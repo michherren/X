@@ -448,6 +448,10 @@ X.volume.prototype.destroy = function() {
   this._IJKVolume.length = 0;
   this._IJKVolumeN.length = 0;
   this._filedata = null;
+  
+  if(this._labelmap) {
+    this._labelmap.destroy();
+  }
 
 };
 
